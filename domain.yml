@@ -1,0 +1,42 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - find_by_destination
+
+entities:
+  - destination
+
+slots:
+  destination:
+    type: text
+    mappings:
+      - type: from_text
+        entity: destination
+
+responses:
+  utter_greet:
+    - text: "Hello! How may I help you?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_anything_else:
+    - text: "Anything else I can help?"
+
+  utter_where:
+    - text: "Where do you want to travel?"
+
+actions:
+  - action_by_destination
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
