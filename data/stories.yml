@@ -1,6 +1,14 @@
 version: "3.1"
 
 stories:
+  - story: Recommend flights
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: recommend
+      - action: action_recommend
+      - action: utter_anything_else
+
   - story: Find ticket by destination
     steps:
       - intent: greet

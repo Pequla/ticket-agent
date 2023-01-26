@@ -6,6 +6,7 @@ intents:
   - affirm
   - deny
   - bot_challenge
+  - recommend
   - find_by_destination
 
 entities:
@@ -35,6 +36,7 @@ responses:
     - text: "Where do you want to travel?"
 
 actions:
+  - action_recommend
   - action_by_destination
 
 session_config:
