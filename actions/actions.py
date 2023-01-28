@@ -40,7 +40,7 @@ class ActionByDestination(Action):
 
 def create_carousel(path: str, dispatcher: CollectingDispatcher, msg: str):
     # Fetching backend
-    rsp = requests.get(f'http://82.208.22.205:7000/api/flight{path}')
+    rsp = requests.get(f'https://flight.pequla.com/api/flight{path}')
 
     if rsp.status_code != 200:
         dispatcher.utter_message(text="Oops! The flight service gave me an error")
