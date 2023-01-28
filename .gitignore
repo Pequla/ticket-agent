@@ -1,4 +1,4 @@
 .idea/
 .rasa/
 models/
-__pycache__/
+actions/__**
