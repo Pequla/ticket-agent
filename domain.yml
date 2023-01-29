@@ -16,7 +16,7 @@ slots:
   destination:
     type: text
     mappings:
-      - type: from_text
+      - type: from_entity
         entity: destination
 
 responses:
@@ -31,9 +31,6 @@ responses:
 
   utter_anything_else:
     - text: "Anything else I can help?"
-
-  utter_where:
-    - text: "Where do you want to travel?"
 
 actions:
   - action_recommend
